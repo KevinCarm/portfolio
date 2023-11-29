@@ -13,7 +13,7 @@ nav {
 .link:hover {
     padding: 5px;
     border-radius: 10px;
-    background: #292929;
+    background: #320032;
     color: #ffffff;
 }
 
@@ -41,7 +41,7 @@ div {
     .container_mobile_link:hover {
         width: 100%;
         cursor: pointer;
-        background: #292929;
+        background: #320032;
         color: #fff;
         border-radius: 10px;
     }
