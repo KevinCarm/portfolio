@@ -1,0 +1,28 @@
+.container {
+    margin-top: 10%;
+    width: 100%;
+    margin-left: 5%;
+}
+.container p{
+    color: #ffffff
+}
+
+.text_container {
+    width: 50%;
+    word-wrap: break-word;
+}
+p {
+    font-size: 20px;
+}
+
+
+@media screen and (max-width: 780px){
+    .container {
+        width: 100%;
+        margin-top: 25%;
+    }
+    .container div {
+        width: 100%;
+        margin-top: 60px;
+    }
+}
