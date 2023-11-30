@@ -1,6 +1,7 @@
 import Navbar from "./components/Navbar/Navbar.jsx";
 import About from "./components/About/About.jsx";
 import Experience from "./components/Experience/Experience.jsx";
+import Footer from "./components/Footer/Footer.jsx";
 
 function App() {
 
@@ -8,7 +9,8 @@ function App() {
     <>
       <Navbar />
       <About />
-    <Experience />
+      <Experience />
+      <Footer />
     </>
   )
 }
