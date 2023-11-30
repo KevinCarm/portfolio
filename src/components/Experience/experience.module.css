@@ -1,0 +1,52 @@
+.container {
+    width: 100%;
+    margin-top: 10%;
+}
+
+.container_1 {
+    margin-top: 10px;
+    border-radius: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.skills {
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr 0.5fr;
+    grid-gap: 5px;
+}
+
+.item_container {
+    width: 80%;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+@media screen and (min-width: 780px){
+    .container {
+        width: 100%;
+        margin-top: 10%;
+    }
+
+    .container_1 {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .item_container {
+        width: 60%;
+        padding: 15px;
+        border-radius: 15px;
+    }
+}
+
+
+.item_container:hover {
+    box-shadow: #800080 0px 7px 29px 0px;
+}
+
+.item_container h4, p {
+    color: #fff;
+}
