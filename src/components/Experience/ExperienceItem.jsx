@@ -16,8 +16,8 @@ const ExperienceItem = (props) => {
                 <h4>{props.description}</h4>
             </div>
         </div>
-        <div className={style.skills}>
-            {props.skills.map(e => <span className="tag is-success">{e}</span>)}
+        <div key={props.title} className={style.skills}>
+            {props.skills.map(e => <span className="tag is-link">{e}</span>)}
         </div>
     </div>
     <br/>
