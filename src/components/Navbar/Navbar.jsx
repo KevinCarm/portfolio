@@ -23,17 +23,17 @@ const Navbar = () => {
             </div>
             <div id="navbarBasicExample" className="navbar-menu">
                 <div className={style.container}>
-                    <a className={style.link}>Inicio</a>
-                    <a className={style.link}>Contacto</a>
+                    <a href="/home" className={style.link}>Inicio</a>
+                    <a href="/contact" className={style.link}>Contacto</a>
                 </div>
             </div>
             
             {isActive ? <div className={style.container_mobile}>
                 <div className={style.container_mobile_link}>
-                    <a className={style.link}>Inicio</a>
+                    <a href="/home" className={style.link}>Inicio</a>
                 </div>
                 <div className={style.container_mobile_link}>
-                    <a className={style.link}>Contacto</a>
+                    <a href="/contact" className={style.link}>Contacto</a>
                 </div>
         </div> : null}
         </nav>
