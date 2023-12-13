@@ -33,7 +33,8 @@ const Contact = () => {
             setIsSending(false)
             setShowNotification(true);
         } else {
-            emailjs.sendForm('service_4eqp0py', 'template_5ulqaoc', form.current, 'FaePa9gFHMslQCvfH')
+            if(validateEmail(emailRef.current.value)) {
+                emailjs.sendForm('service_4eqp0py', 'template_5ulqaoc', form.current, 'FaePa9gFHMslQCvfH')
               .then(() => {
                   setIsSending(false)
                   setMessageNotificacion({
@@ -42,12 +43,19 @@ const Contact = () => {
                   })
                   setShowNotification(true);
                   }, (error) => {
-                      setIsSending(false)
+                  setIsSending(false)
                       setMessageNotificacion({
                           message: `Hubo un error al enviar tu mensaje, intenta de nuevo ${error.text}`,
                           style: "notification is-danger"
                       })
               });
+            } else {
+                setShowNotification(true);
+                setMessageNotificacion({
+                    message: "El email no tiene el formato correcto",
+                    style: "notification is-danger"
+                })
+            }
             setIsSending(false)
         }
     };
@@ -92,5 +100,9 @@ const Contact = () => {
     </form>
     </>
 };
+
+const validateEmail = email => {
+    return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email);
+}
 
 export default Contact;
