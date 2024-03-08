@@ -1,46 +1,65 @@
-import 'bulma/css/bulma.css'
+import "bulma/css/bulma.css";
 import ExperienceItem from "./ExperienceItem.jsx";
-import style from './experience.module.css';
-
-const list = [
-    {
-        title: "Desarrollador Java",
-        where: "Coppel, Servicios Financieros",
-        when: "Enero 2023 - Hoy",
-        description: "Desarrollo de sistemas bancarios y participación en el desarrollo del core bancario",
-        skills: ["Java", "Spring Boot", "Insumos BIAN", "Servicios web"]
-    },
-    {
-        title: "App de Registro de gastos",
-        where: "Proyecto personal",
-        when: "Octubre 2023",
-        description: "Aplicación de android nativa que permite el registro de gastos diarios realizados, mostrando una lista dividida por fechas con sus respectivos gastos",
-        skills: ["Kotlin", "Android Studio", "ROOM"]
-    },
-    {
-        title: "App para consulta de clima",
-        where: "Proyecto personal",
-        when: "Octubre 2022",
-        description: "Aplicación de android nativa que muestra un mapa de google y al dar click en una ciudad se obtiene sus coordenadas con las cuales se consulta una api externa para obtener información del clima",
-        skills: ["Kotlin", "Android Studio", "APIS", "View Model"]
-    },
-    {
-        title: "Servicio Back End con spring",
-        where: "Proyecto personal",
-        when: "Septiempre 2022",
-        description: "Un servicio web creado con spring que utiliza jpa para la persistencia de datos y spring security junto con jwt para crear una autenticación simple",
-        skills: ["Java", "Spring Boot", "APIS", "Spring Security", "JWT"]
-   },
-];
+import style from "./experience.module.css";
+import close from "../../assets/close.svg";
+import list from "./data.js";
+import { useState } from "react";
 
 const Experience = () => {
-    return <>
-    <div className={style.container}>
-        {list.map(e => <div className={style.container_1} key={e.when}>
-            <ExperienceItem skills={e.skills} title={e.title} description={e.description} where={e.where} when={e.when}/>
-        </div>)}
-    </div>
-    </>
+    const [selectItem, setSelectItem] = useState([]);
+
+    const onItemClickLister = title => {
+        const modal = document.querySelector("#modal");
+        setSelectItem(list.find(i => i.title === title).images);
+        modal.showModal();
+    };
+
+    const onCloseModalClickListener = () => {
+        setSelectItem([]);
+        const modal = document.querySelector("#modal");
+        modal.close();
+    };
+
+    return (
+        <>
+            {typeof selectItem != "undefined" ? (
+                <dialog id='modal' className={style.dialog}>
+                    <div
+                        className={`${style.close_container} is-flex is-column`}
+                    >
+                        <img
+                            onClick={onCloseModalClickListener}
+                            src={close}
+                            className={style.close}
+                        />
+                    </div>
+                    <div className= {`${style.image_container}`}>
+                            {typeof selectItem != "undefined"
+                                ? selectItem.length > 0
+                                    ? selectItem.map(i => (
+                                          <img key={Date.now()} src={i} />
+                                      ))
+                                    : null
+                                : null}
+                        </div>
+                </dialog>
+            ) : null}
+            <div className={style.container}>
+                {list.map(e => (
+                    <div className={style.container_1} key={e.when}>
+                        <ExperienceItem
+                            onClickEvent={onItemClickLister}
+                            skills={e.skills}
+                            title={e.title}
+                            description={e.description}
+                            where={e.where}
+                            when={e.when}
+                        />
+                    </div>
+                ))}
+            </div>
+        </>
+    );
 };
 
 export default Experience;
