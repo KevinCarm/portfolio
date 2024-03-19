@@ -1,0 +1,31 @@
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.container_form {
+    width: 90%;
+}
+
+.container_form h1 {
+    color: #fff
+}
+
+.button {
+    width: 100%;
+}
+
+.button_container {
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (min-width: 780px){
+    .container_form {
+        width: 40%;
+    }
+    .button {
+        width: 15%;
+    }
+}

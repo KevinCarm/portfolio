@@ -32,7 +32,7 @@ div {
     display: none;
 }
 
-@media screen and (max-width: 780px){
+@media screen and (max-width: 1080px){
     .container_mobile {
         display: flex;
         flex-direction: column;
