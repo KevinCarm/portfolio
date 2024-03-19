@@ -14,7 +14,7 @@ const list = [
         description:
             "Un programa de consola hecho en Java que simula ser un CURL, el cual te permite realizar peticiones http usando comandos desde la consola Java",
         skills: ["Java", "CLI", "Http", "Rest", "CompletableFuture"],
-        images: ["../../assets/images/HttpCLI/1.png"],
+        images: ["assets/images/HttpCLI/1.png"],
     },
     {
         title: "App para consultar noticias online",
