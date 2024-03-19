@@ -14,7 +14,7 @@ const list = [
         description:
             "Un programa de consola hecho en Java que simula ser un CURL, el cual te permite realizar peticiones http usando comandos desde la consola Java",
         skills: ["Java", "CLI", "Http", "Rest", "CompletableFuture"],
-        images: ["/vite.svg"],
+        images: ["/images/HttpCLI/1.png"],
     },
     {
         title: "App para consultar noticias online",
@@ -24,8 +24,8 @@ const list = [
             "Aplicación de android nativa que consulta noticias relacionadas a una palabra ingresada por el usuario",
         skills: ["Kotlin", "Android Studio", "Http", "Rest", "Retrofit"],
         images: [
-            "src\\assets\\images\\Noticias\\1.png",
-            "src\\assets\\images\\Noticias\\2.png",
+            "/images/Noticias/1.png",
+            "/images/Noticias/2.png",
         ],
     },
     {
@@ -36,8 +36,8 @@ const list = [
             "Aplicación de android nativa que permite el registro de gastos diarios realizados, mostrando una lista dividida por fechas con sus respectivos gastos",
         skills: ["Kotlin", "Android Studio", "ROOM"],
         images: [
-            "src\\assets\\images\\Gastos\\1.png",
-            "src\\assets\\images\\Gastos\\2.png",
+            "/images/Gastos/1.png",
+            "/images/Gastos/2.png",
         ],
     },
     {
@@ -48,8 +48,8 @@ const list = [
             "Aplicación de android nativa que muestra un mapa de google y al dar click en una ciudad se obtiene sus coordenadas con las cuales se consulta una api externa para obtener información del clima",
         skills: ["Kotlin", "Android Studio", "APIS", "View Model"],
         images: [
-            "src\\assets\\images\\Clima\\1.png",
-            "src\\assets\\images\\Clima\\2.png",
+            "/images/Clima/1.png",
+            "/images/Clima/2.png",
         ],
     },
     {
