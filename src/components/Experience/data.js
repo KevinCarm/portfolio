@@ -1,8 +1,16 @@
 const list = [
     {
+        title: "Desarrollador APX",
+        where: "Capgemini",
+        when: "Marzo 2024 - Hoy",
+        description:
+            "Desarrollo de sistemas usando APX dentro de BBVA",
+        skills: ["Java", "APX", "APIS"],
+    },
+    {
         title: "Desarrollador Java",
         where: "Coppel, Servicios Financieros",
-        when: "Enero 2023 - Hoy",
+        when: "Enero 2023 - Marzo 2024",
         description:
             "Desarrollo de sistemas bancarios y participación en el desarrollo del core bancario",
         skills: ["Java", "Spring Boot", "Insumos BIAN", "Servicios web"],
