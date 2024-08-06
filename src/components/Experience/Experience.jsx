@@ -54,6 +54,7 @@ const Experience = () => {
                             description={e.description}
                             where={e.where}
                             when={e.when}
+                            images={e.images}
                         />
                     </div>
                 ))}
