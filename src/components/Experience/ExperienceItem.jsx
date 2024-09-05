@@ -2,11 +2,6 @@ import "bulma/css/bulma.css";
 import style from "./experience.module.css";
 
 const ExperienceItem = props => {
-    let count = 2;
-    if(props.images) {
-        count = props.images.length;
-    }
-    const stypeImages = { width: count > 1 ? "60px": "50%", height: "100px",  borderRadius: "10px"}
     return (
         <>
             <br />
@@ -35,18 +30,9 @@ const ExperienceItem = props => {
                 <br />
                 <div>
                     {
-                        props.images ?
-                            <div className="columns is-desktop">
-                                {
-                                    props.images.map(i => <div className="column">
-                                        <img style={stypeImages} src={i} />
-                                    </div>)
-                                }
-                            </div> : null
+                        props.images ? <span class="tag is-success">Click para ver las imagenes</span> : null
                     }
                 </div>
-                <br />
-                <br />
                 <br />
             </div>
             <br />
