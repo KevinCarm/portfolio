@@ -16,6 +16,14 @@ const list = [
         skills: ["Java", "Spring Boot", "Insumos BIAN", "Servicios web"],
     },
     {
+        title: "Variables del sistema",
+        where: "Proyecto personal",
+        when: "Agosto 2024",
+        description: "Programa hecho con C# y windows forms que te permite ver, crear, editar y eliminar las variables del sistema en tu usuario actual o del sistema en general",
+        skills: ["C#", "Windows Forms", "Environment Variables", "Windows", "Visual Studio"],
+        images: ["/images/Variables/1.png", "/images/Variables/2.png", "/images/Variables/3.png"]
+    },
+    {
         title: "Simple curl hecho con Java",
         where: "Proyecto personal",
         when: "Febrero 2024",
