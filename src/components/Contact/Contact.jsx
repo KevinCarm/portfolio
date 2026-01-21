@@ -60,6 +60,9 @@ const Contact = () => {
             }
             setIsSending(false)
         }
+        userNameRef.current.value = '';
+        emailRef.current.value = '';
+        messageRef.current.value = '';
     };
 
     const closeNotificationClickEvent = () => {
@@ -69,7 +72,7 @@ const Contact = () => {
     const userNameStyle = !isUserNameError ? "input" : "input is-danger";
     const emailStyle = !isEmailError ? "input" : "input is-danger";
     const messageStyle = !isMessageError ? "textarea" : "textarea is-danger";
-    const buttonStyle = !isSending ? `button is-success ${style.button}` : `button is-success is-loading ${style.button}`
+    const buttonStyle = !isSending ? `button is-success ${style.button}` : `button is-success is-loading`
 
     return <>
         <br/>
