@@ -30,7 +30,7 @@ const ExperienceItem = props => {
                 <br />
                 <div>
                     {
-                        props.images ? <span class="tag is-success">Click para ver las imagenes</span> : null
+                        props.images ? <span className="tag is-success">Click para ver las imagenes</span> : null
                     }
                 </div>
                 <br />

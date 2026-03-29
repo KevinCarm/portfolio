@@ -20,6 +20,9 @@ const Experience = () => {
         modal.close();
     };
 
+    let workExperience = list.filter(i => i.where !== "Proyecto personal");
+    console.log(workExperience)
+
     return (
         <>
             {typeof selectItem != "undefined" ? (
@@ -33,31 +36,52 @@ const Experience = () => {
                             className={style.close}
                         />
                     </div>
-                    <div className= {`${style.image_container}`}>
-                            {typeof selectItem != "undefined"
-                                ? selectItem.length > 0
-                                    ? selectItem.map(i => (
-                                          <img key={Date.now()} src={i} />
-                                      ))
-                                    : null
-                                : null}
-                        </div>
+                    <div className={`${style.image_container}`}>
+                        {typeof selectItem != "undefined"
+                            ? selectItem.length > 0
+                                ? selectItem.map(i => (
+                                    <img key={Date.now()} src={i} />
+                                ))
+                                : null
+                            : null}
+                    </div>
                 </dialog>
             ) : null}
             <div className={style.container}>
-                {list.map(e => (
-                    <div className={style.container_1} key={e.when}>
-                        <ExperienceItem
-                            onClickEvent={onItemClickLister}
-                            skills={e.skills}
-                            title={e.title}
-                            description={e.description}
-                            where={e.where}
-                            when={e.when}
-                            images={e.images}
-                        />
-                    </div>
-                ))}
+                {list.map(e => {
+                    if (e.where != 'Proyecto personal') {
+                        return <div className={style.container_1} key={e.when}>
+                            <ExperienceItem
+                                onClickEvent={onItemClickLister}
+                                skills={e.skills}
+                                title={e.title}
+                                description={e.description}
+                                where={e.where}
+                                when={e.when}
+                                images={e.images}
+                            />
+                        </div>
+                    }
+                })}
+            </div>
+            <br/>
+            <hr style={{margin: "20px"}}/>
+            <div className={style.container}>
+                {list.map(e => {
+                    if (e.where == 'Proyecto personal') {
+                        return <div className={style.container_1} key={e.when}>
+                            <ExperienceItem
+                                onClickEvent={onItemClickLister}
+                                skills={e.skills}
+                                title={e.title}
+                                description={e.description}
+                                where={e.where}
+                                when={e.when}
+                                images={e.images}
+                            />
+                        </div>
+                    }
+                })}
             </div>
         </>
     );
