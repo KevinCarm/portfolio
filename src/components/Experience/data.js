@@ -1,8 +1,16 @@
 const list = [
     {
+        title: "Backend Developer",
+        where: "Banamex",
+        when: "Julio 2026 - Hoy",
+        description:
+            "Desarrollo de servicios usando Spring boot, soporte a servidores Linux, administración de usuarios en OpenPages",
+        skills: ["Java", "APX", "APIS"],
+    },
+    {
         title: "Desarrollador APX",
         where: "Capgemini",
-        when: "Marzo 2024 - Hoy",
+        when: "Marzo 2024 - Julio 2026",
         description:
             "Desarrollo de sistemas usando APX dentro de BBVA",
         skills: ["Java", "APX", "APIS"],
